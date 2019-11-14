@@ -7,7 +7,7 @@ RISEModel.outputPaths = {
   agenda1: "",
   agenda2: "",
   agenda3: "",
-  targetlocationFolder: "C:\\xampp\\htdocs\\rise2019dev\\"
+  targetlocationFolder: "../output/"
 };
 
 RISEModel.inputPaths = {
@@ -16,7 +16,8 @@ RISEModel.inputPaths = {
   excelfilepath: "../data/Master Contact List.xlsx",
   programTemplatePath: "../templates/rise-session-template.html",
   speakerTemplate: "../templates/speaker_template.html",
-  riseAllSpeakers: "../templates/rise-speakers-template.html"
+  riseAllSpeakers: "../templates/rise-speakers-template.html",
+  agendaTemplatepath: "../templates/"
 };
 
 module.exports.RISEModel = RISEModel;

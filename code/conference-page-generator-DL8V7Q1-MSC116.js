@@ -8,7 +8,6 @@ const { RISEModel } = require("./model.js");
 const imageFolderLocation = RISEModel.inputPaths.imageFolderLocation;
 const targetlocationFolder = RISEModel.outputPaths.targetlocationFolder;
 const excelfilepath = RISEModel.inputPaths.excelfilepath; // needs to change
-const AgendaTemplatepath = RISEModel.inputPaths.agendaTemplatepath;
 const conference_page_attributes = [
   "First Name",
   "Last Name",
@@ -53,8 +52,7 @@ const session_types = [
   "Film Screening",
   "Opening",
   "Keynote Address",
-  "Cohort Report",
-  "Closing"
+  "Cohort Report"
 ];
 const welcome_panelist_order = [2, 0, 3, 1]; // Order for welcome panelist precedence as per their last name
 
@@ -535,7 +533,7 @@ function createAgendaPages(Sessions) {
   for (let day = 1; day <= 3; day++) {
     let agenda_template = fs
       .readFileSync(
-        AgendaTemplatepath + "agenda-day" + day + "-template.html"
+        templates + "agenda-day" + day + "-template.html"
       )
       .toString();
     let current_day_sessions = Sessions.filter(session => {
